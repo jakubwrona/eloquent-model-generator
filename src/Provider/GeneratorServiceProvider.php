@@ -48,5 +48,8 @@ class GeneratorServiceProvider extends ServiceProvider
     public function boot()
     {
         Event::listen(CommandStarting::class, [GenerateCommandEventListener::class, 'handle']);
+        $this->publishes([
+            __DIR__ . '/../config/eloquent_model_generator.php' => config_path('eloquent_model_generator.php'),
+        ], 'laravel-assets');
     }
 }

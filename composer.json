@@ -1,7 +1,8 @@
 {
-    "name": "krlove/eloquent-model-generator",
+    "name": "jakubwrona/eloquent-model-generator",
     "description": "Eloquent Model Generator",
-    "version": "2.0.2",
+    "version": "1.0",
+    "minimum-stability": "dev",
     "license": "MIT",
     "autoload": {
         "psr-4": {

@@ -18,7 +18,10 @@ class EmgHelper
 
     public static function getTableNameByClassName(string $className): string
     {
-        return Str::plural(Str::snake($className));
+        if (config('eloquent_model_generator.plural_table_names', true)) {
+            return Str::plural(Str::snake($className));
+        }
+        return Str::singular(Str::snake($className));
     }
 
     public static function getClassNameByTableName(string $tableName): string
